@@ -1,0 +1,23 @@
+int x = 100;                                  //Hawkins & Shon
+int y = 100;
+float endW;
+
+void setup() {                                //draw once
+  size(200, 200);
+  frameRate(10);                               //number of times code is read per second
+  endW = 0;                                   //value "endW" is 0
+}
+
+void draw() {                                 //draw indefinitely
+  background(255);
+  stroke(0);                                  //
+  noFill();
+
+  for (float w = 0.0; w<=endW; w+=3.0) {      //for (initial value; until this happens; change the value this way each step)
+    ellipse(x, y, w, w);                      //use the value to do this each step
+  }                                           //end of for loop
+
+  if (endW<=200) {                            //if endW is less than or equal to 200, do the next line
+    endW=endW+3.0;                            //if the above is true, do this
+  }                                           //end if statement
+}
